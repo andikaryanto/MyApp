@@ -9,13 +9,12 @@ import {
   StatusBar,
   View,
   Button,
-  TextInput,
-  FormInput
+  TextInput
 } from 'react-native';
-import FormInput from '../components';
 import { WebBrowser } from 'expo';
 import LoginStyles from '../styles/LoginStyle';
 import { TextField } from 'react-native-material-textfield';
+import { Header, Icon } from 'react-native-elements'
 // import AppNavigator from '../navigation/AppNavigator';
 
 export default class LoginScreen extends React.Component {
@@ -38,7 +37,16 @@ export default class LoginScreen extends React.Component {
         <View style={LoginStyles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
          
-          <FormInput 
+            
+          <Icon
+            name='television'
+            type='font-awesome'
+            color='#fff' 
+            size = {70}
+            />
+          <TextField 
+            baseColor = "rgb(255, 255, 255)"
+            tintColor = "rgb(255, 255, 255)"
             label='Phone number'
             value={this.state.phone}
             onChangeText={ (phone) => this.setState({ phone }) }

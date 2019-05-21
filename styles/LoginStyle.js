@@ -1,12 +1,15 @@
 
 import React from 'react';
 import Colors from '../constants/Colors';
+import { NavigationEvents } from 'react-navigation';
 
 export default {
     container: {
       flex: 1,
       backgroundColor: Colors.loginBackground,
-      padding : 10
+      paddingHorizontal: 10,
+      paddingTop: 200,
+      
     },
   
     titleText: {
@@ -14,7 +17,11 @@ export default {
       fontWeight: 'bold',
     },
 
-    baseColor: 'rgb(255, 255, 255)'
+    header: {
+      backgroundColor: Colors.loginBackground,
+      padding : 0,
+      borderBottomColor: Colors.loginBackground 
+    }
 
 
   };

@@ -2,7 +2,7 @@
 import React from 'react';
 import { TextField } from 'react-native-material-textfield';
 
-export class FormInput extends TextField { 
+export default class FormInput extends React.Component { 
     constructor(props) {
         super(props);
     }
